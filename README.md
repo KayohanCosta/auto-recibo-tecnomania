@@ -4,6 +4,21 @@ Sistema completo e profissional de geração de recibos digitais com PDF para a 
 
 ## 🎯 Características
 
+### ⚙️ **Configuração de Dados da Empresa** (v1.1.0) 🆕
+- Botão de configurações no header da página inicial
+- Edição completa dos dados da empresa:
+  - Nome da empresa
+  - CNPJ
+  - Endereço completo
+  - Telefone de contato
+  - E-mail
+  - Site
+  - Instagram (usuário)
+  - Horário de atendimento
+- Alterações aplicadas automaticamente em **Recibos de Venda** e **Serviço**
+- Botão "Restaurar Padrão" para voltar aos dados da Tecno Mania
+- Persistência via localStorage
+
 ### ✅ **Três Tipos de Recibos**
 
 1. **Recibo de Serviço** (Garantia 90 dias)
@@ -11,12 +26,14 @@ Sistema completo e profissional de geração de recibos digitais com PDF para a 
    - Dados do cliente e serviço executado
    - Cálculo automático de validade
    - Layout profissional com logos e formatação
+   - **Usa dados configuráveis da empresa**
 
 2. **Recibo de Venda** (Garantia 30 dias)
    - Tabela dinâmica de produtos/itens
    - Cálculo automático de totais e descontos
    - Suporte para múltiplas formas de pagamento
    - Layout com design corporativo
+   - **Usa dados configuráveis da empresa**
 
 3. **Recibo Personalizado** ✨
    - Totalmente customizável
