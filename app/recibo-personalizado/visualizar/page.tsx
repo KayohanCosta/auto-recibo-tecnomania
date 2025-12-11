@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Printer, PhoneCall, Mail, Globe2 } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 
 interface Item {
   descricao: string
@@ -102,6 +101,9 @@ export default function VisualizarReciboPersonalizado() {
     total: formatarPreco(item.preco),
   })) || []
 
+  const defaultLogo = "/logo-tecnomania.svg"
+  const logoSrc = reciboData.logoUrl || defaultLogo
+
   return (
     <main className="min-h-screen bg-neutral-200 py-6">
       {/* Barra de ações */}
@@ -122,13 +124,16 @@ export default function VisualizarReciboPersonalizado() {
 
         {/* Header */}
         <div className="flex items-start gap-4 mb-3">
-          {reciboData.logoUrl ? (
-            <img src={reciboData.logoUrl} alt="Logo" className="w-[92px] h-[92px] object-contain shrink-0" />
-          ) : (
-            <div className="w-[92px] h-[92px] bg-gray-200 flex items-center justify-center shrink-0 text-xs text-gray-400">
-              Logo
-            </div>
-          )}
+          <img
+            src={logoSrc}
+            alt="Logo"
+            className="w-[92px] h-[92px] object-contain shrink-0"
+            onError={(e) => {
+              const target = e.currentTarget
+              if (target.src.includes("logo-tecnomania.png")) return
+              target.src = "/logo-tecnomania.png"
+            }}
+          />
           <div className="flex-1">
             <h1 className="text-[17px] font-black tracking-[0.3px] leading-tight">{reciboData.nomeEmpresa}</h1>
             <p className="text-[11px] font-semibold">CNPJ: {reciboData.cnpj}</p>
@@ -252,7 +257,7 @@ export default function VisualizarReciboPersonalizado() {
         <div className="space-y-1 text-[12px] font-bold mb-4">
           <p>INFORMAÇÕES DE PAGAMENTOS:</p>
           <p className="font-semibold">
-            Name: <span className="font-normal">{reciboData.nomeCliente}</span>
+            Nome: <span className="font-normal">{reciboData.nomeCliente}</span>
           </p>
           <p className="font-semibold">
             Contato: <span className="font-normal">{reciboData.telefoneCliente}</span>
