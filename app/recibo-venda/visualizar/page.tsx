@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { PhoneCall, Mail, Globe2, ArrowLeft, Printer } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -112,7 +111,7 @@ export default function VisualizarReciboVenda() {
 
         {/* Header */}
         <div className="flex items-start gap-4 mb-3">
-          <Image src="/logo-tecnomania.png" alt="Logo" width={92} height={92} className="shrink-0" />
+          <img src="/logo-tecnomania.png" alt="Logo" className="w-[92px] h-[92px] shrink-0 object-contain" />
           <div className="flex-1">
             <h1 className="text-[17px] font-black tracking-[0.3px] leading-tight">{fallbackEmpresa.nome}</h1>
             <p className="text-[11px] font-semibold">CNPJ: {fallbackEmpresa.cnpj}</p>
