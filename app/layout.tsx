@@ -10,6 +10,10 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Sistema de Recibos - Tecno Mania",
   description: "Gerador de recibos profissionais para serviços e vendas",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
