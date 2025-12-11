@@ -130,12 +130,11 @@ export default function VisualizarReciboPersonalizado() {
             className="w-[92px] h-[92px] object-contain shrink-0"
             onError={(e) => {
               const target = e.currentTarget
-              if (target.src === logoSrc && logoSrc !== "/logo-tecnomania.svg") {
-                target.src = "/api/logo"
-              } else if (!target.src.includes("api") && !target.src.includes("placeholder")) {
-                target.src = "/logo-tecnomania.png"
-              } else if (!target.src.includes("placeholder")) {
-                target.src = "/placeholder-logo.png"
+              if (target.src.includes("data:") || target.src.includes("placeholder")) return
+              if (target.src.includes("logo-tecnomania.svg")) {
+                target.src = "/placeholder-logo.svg"
+              } else {
+                target.src = "/logo-tecnomania.svg"
               }
             }}
           />

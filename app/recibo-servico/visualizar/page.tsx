@@ -91,15 +91,13 @@ export default function VisualizarReciboServico() {
         {/* Header */}
         <div className="flex items-start gap-4 mb-3">
           <img 
-            src="/logo-tecnomania.png" 
+            src="/logo-tecnomania.svg" 
             alt="Logo Tecno Mania" 
             className="w-[92px] h-[92px] shrink-0 object-contain" 
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              if (target.src === '/logo-tecnomania.png') {
-                target.src = '/api/logo';
-              } else if (!target.src.includes('placeholder')) {
-                target.src = '/placeholder-logo.png';
+              if (!target.src.includes('placeholder')) {
+                target.src = '/placeholder-logo.svg';
               }
             }}
           />

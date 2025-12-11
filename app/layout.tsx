@@ -11,12 +11,8 @@ export const metadata: Metadata = {
   title: "Sistema de Recibos - Tecno Mania",
   description: "Gerador de recibos profissionais para serviços e vendas",
   icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/favicon.ico", type: "image/x-icon" },
-      { url: "/api/favicon", type: "image/x-icon" },
-    ],
-    apple: "/favicon.png",
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
   },
 }
 
