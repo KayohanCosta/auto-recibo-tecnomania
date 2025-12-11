@@ -69,17 +69,17 @@ export default function HomePage() {
       <div className="container mx-auto px-4 py-8 md:py-16">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-4">
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900">Sistema de Recibos</h1>
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
               <DialogTrigger asChild>
                 <Button 
                   variant="outline" 
                   size="icon" 
-                  className="shrink-0"
+                  className="shrink-0 hover:bg-blue-50 hover:border-blue-300 transition-colors"
                   title="Configurar dados da empresa"
                 >
-                  <Settings className="w-5 h-5" />
+                  <Settings className="w-5 h-5 text-blue-700" />
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
