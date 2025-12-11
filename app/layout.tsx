@@ -13,16 +13,10 @@ export const metadata: Metadata = {
   generator: "v0.app",
   icons: {
     icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-      {
-        url: "/logo-tecnomania.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo-tecnomania.svg", type: "image/svg+xml" },
     ],
-    apple: "/logo-tecnomania.svg",
+    apple: "/logo-tecnomania.png",
   },
 }
 
@@ -33,6 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/svg+xml" href="/logo-tecnomania.svg" />
+        <link rel="apple-touch-icon" href="/logo-tecnomania.png" />
+      </head>
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
