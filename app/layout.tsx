@@ -18,6 +18,7 @@ export const metadata: Metadata = {
       { url: "/logo-tecnomania.svg", type: "image/svg+xml" },
     ],
     apple: "/logo-tecnomania.png",
+    shortcut: "/favicon.ico",
   },
 }
 
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/svg+xml" href="/logo-tecnomania.svg" />
         <link rel="apple-touch-icon" href="/logo-tecnomania.png" />
