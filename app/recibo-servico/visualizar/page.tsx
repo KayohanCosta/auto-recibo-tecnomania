@@ -90,7 +90,14 @@ export default function VisualizarReciboServico() {
 
         {/* Header */}
         <div className="flex items-start gap-4 mb-3">
-          <img src="/logo-tecnomania.png" alt="Logo" className="w-[92px] h-[92px] shrink-0 object-contain" />
+          <img 
+            src="/logo-tecnomania.svg" 
+            alt="Logo Tecno Mania" 
+            className="w-[92px] h-[92px] shrink-0 object-contain" 
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = '/logo-tecnomania.png';
+            }}
+          />
           <div className="flex-1">
             <h1 className="text-[17px] font-black tracking-[0.3px] leading-tight">{fallbackEmpresa.nome}</h1>
             <p className="text-[11px] font-semibold">CNPJ: {fallbackEmpresa.cnpj}</p>

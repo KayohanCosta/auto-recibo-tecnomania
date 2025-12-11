@@ -14,13 +14,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/logo-tecnomania.png",
+        url: "/favicon.ico",
+        sizes: "any",
       },
       {
-        url: "/favicon.ico",
+        url: "/logo-tecnomania.svg",
+        type: "image/svg+xml",
       },
     ],
-    apple: "/logo-tecnomania.png",
+    apple: "/logo-tecnomania.svg",
   },
 }
 
