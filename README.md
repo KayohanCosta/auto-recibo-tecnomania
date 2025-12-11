@@ -148,7 +148,7 @@ Kayohan Costa - [GitHub](https://github.com/KayohanCosta)
 
 ## 📞 **Suporte**
 
-Para dúvidas ou sugestões, contacte: tecnomaniaassistencia@gmail.com
+Para dúvidas ou sugestões, contacte: kayohancostadev@gmail.com
 
 ---
 
