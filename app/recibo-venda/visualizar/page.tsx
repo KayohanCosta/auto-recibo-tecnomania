@@ -117,7 +117,9 @@ export default function VisualizarReciboVenda() {
             className="w-[92px] h-[92px] shrink-0 object-contain" 
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              if (!target.src.includes('placeholder')) {
+              if (target.src === '/logo-tecnomania.png') {
+                target.src = '/api/logo';
+              } else if (!target.src.includes('placeholder')) {
                 target.src = '/placeholder-logo.png';
               }
             }}

@@ -130,8 +130,13 @@ export default function VisualizarReciboPersonalizado() {
             className="w-[92px] h-[92px] object-contain shrink-0"
             onError={(e) => {
               const target = e.currentTarget
-              if (target.src.includes("logo-tecnomania.png")) return
-              target.src = "/logo-tecnomania.png"
+              if (target.src === logoSrc && logoSrc !== "/logo-tecnomania.svg") {
+                target.src = "/api/logo"
+              } else if (!target.src.includes("api") && !target.src.includes("placeholder")) {
+                target.src = "/logo-tecnomania.png"
+              } else if (!target.src.includes("placeholder")) {
+                target.src = "/placeholder-logo.png"
+              }
             }}
           />
           <div className="flex-1">
