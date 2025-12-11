@@ -28,12 +28,18 @@ const fallbackEmpresa = {
 
 export default function VisualizarReciboServico() {
   const [reciboData, setReciboData] = useState<ReciboData | null>(null)
+  const [dadosEmpresa, setDadosEmpresa] = useState(fallbackEmpresa)
 
   useEffect(() => {
     const data = localStorage.getItem("reciboServico")
     if (data) {
       const parsed = JSON.parse(data)
       setReciboData(parsed)
+    }
+    
+    const empresaData = localStorage.getItem("dadosEmpresa")
+    if (empresaData) {
+      setDadosEmpresa(JSON.parse(empresaData))
     }
   }, [])
 
@@ -102,8 +108,8 @@ export default function VisualizarReciboServico() {
             }}
           />
           <div className="flex-1">
-            <h1 className="text-[17px] font-black tracking-[0.3px] leading-tight">{fallbackEmpresa.nome}</h1>
-            <p className="text-[11px] font-semibold">CNPJ: {fallbackEmpresa.cnpj}</p>
+            <h1 className="text-[17px] font-black tracking-[0.3px] leading-tight">{dadosEmpresa.nome}</h1>
+            <p className="text-[11px] font-semibold">CNPJ: {dadosEmpresa.cnpj}</p>
           </div>
         </div>
 
@@ -123,10 +129,10 @@ export default function VisualizarReciboServico() {
 
         {/* Contatos linha a linha */}
         <div className="text-[12px] leading-[16px] font-semibold mb-6 space-y-1">
-          <p>Endereço: {fallbackEmpresa.endereco}</p>
-          <p>Contatos: {fallbackEmpresa.telefone} | Insta: {fallbackEmpresa.insta}</p>
-          <p>E-mail: {fallbackEmpresa.email} | Site: {fallbackEmpresa.site}</p>
-          <p>Atendimento: {fallbackEmpresa.atendimento}</p>
+          <p>Endereço: {dadosEmpresa.endereco}</p>
+          <p>Contatos: {dadosEmpresa.telefone} | Insta: {dadosEmpresa.insta}</p>
+          <p>E-mail: {dadosEmpresa.email} | Site: {dadosEmpresa.site}</p>
+          <p>Atendimento: {dadosEmpresa.atendimento}</p>
         </div>
 
         {/* Cliente */}
