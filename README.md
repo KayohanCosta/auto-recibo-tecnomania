@@ -154,6 +154,50 @@ O aplicativo funciona perfeitamente em:
 - ✅ Nenhuma informação é enviada para servidores
 - ✅ Seguro e privado
 
+## 🚀 **Deploy no Vercel**
+
+Este projeto está pronto para deploy no Vercel. Siga os passos abaixo:
+
+### Método 1: Deploy via Interface Web (Recomendado)
+
+1. Acesse [vercel.com](https://vercel.com) e faça login com sua conta GitHub
+2. Clique em "Add New Project"
+3. Importe o repositório `KayohanCosta/auto-recibo-tecnomania`
+4. Mantenha as configurações padrão (Vercel detecta automaticamente Next.js)
+5. Clique em "Deploy"
+
+O site será publicado automaticamente em uma URL como: `https://auto-recibo-tecnomania.vercel.app`
+
+### Método 2: Deploy via CLI
+
+```bash
+# Instale a CLI do Vercel globalmente
+npm install -g vercel
+
+# No diretório do projeto, execute:
+vercel
+
+# Para deploy em produção:
+vercel --prod
+```
+
+### Configurações Automáticas
+
+O projeto já está configurado com:
+- ✅ `vercel.json` otimizado para Next.js
+- ✅ Headers de segurança (X-Frame-Options, X-Content-Type-Options, etc.)
+- ✅ Cache para recursos estáticos (favicon, logos)
+- ✅ Build automatizado
+- ✅ Analytics do Vercel (@vercel/analytics)
+
+### Variáveis de Ambiente
+
+Este projeto não requer variáveis de ambiente especiais. Todos os dados são armazenados localmente no navegador do usuário.
+
+### Deploy Contínuo
+
+Após o primeiro deploy, cada push para a branch `main` gerará automaticamente um novo deploy em produção. Pull requests criam deploys de preview automaticamente.
+
 ## 📝 **Licença**
 
 Este projeto é exclusivo para KayohanCostadev.
