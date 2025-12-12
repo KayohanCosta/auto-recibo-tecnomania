@@ -1,6 +1,6 @@
-# Auto Recibo - Tecno Mania 🏪
+# Auto Recibo 🏪
 
-Sistema completo e profissional de geração de recibos digitais com PDF para a Tecno Mania Assistência & Variedades.
+Sistema completo e profissional de geração de recibos digitais com PDF.
 
 ## 🎯 Características
 
@@ -16,13 +16,12 @@ Sistema completo e profissional de geração de recibos digitais com PDF para a 
   - Instagram (usuário)
   - Horário de atendimento
 - Alterações aplicadas automaticamente em **Recibos de Venda** e **Serviço**
-- Botão "Restaurar Padrão" para voltar aos dados da Tecno Mania
 - Persistência via localStorage
 
 ### ✅ **Três Tipos de Recibos**
 
 1. **Recibo de Serviço** (Garantia 90 dias)
-   - Formulário pré-configurado para a Tecno Mania
+   - Formulário pré-configurado para somente preencher
    - Dados do cliente e serviço executado
    - Cálculo automático de validade
    - Layout profissional com logos e formatação
@@ -157,7 +156,7 @@ O aplicativo funciona perfeitamente em:
 
 ## 📝 **Licença**
 
-Este projeto é exclusivo para Tecno Mania Assistência & Variedades.
+Este projeto é exclusivo para KayohanCostadev.
 
 ## 👨‍💻 **Desenvolvido por**
 
